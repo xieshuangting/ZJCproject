@@ -1,0 +1,292 @@
+/*通用样式开始*/
+html{
+	height: 100%;
+	width: 100%;
+	min-width: 340px;
+}
+body{
+	height: 100%;
+	width: 100%;
+	background:#2e63b1;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+h1{
+	margin: 0;
+	font-weight: normal;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	font-size: 16px;
+	color: rgb(0,20,51);
+	margin: 0;
+	font-weight: normal;
+	padding-top: 20px;
+}
+h2>img{
+	margin-right: 10px;
+	margin-left: 20px;
+	position: relative;
+	top: 3px;
+}
+.clearfix{
+	clear: both;
+	display: table;
+}
+/*通用样式结束*/
+
+/*头部样式开始*/
+header{
+	height: 60px;
+	color: #fff;
+	padding-left: 40px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+header h1{
+	font-size: 20px;
+	line-height: 60px;
+	float: left;
+	height: 100%;
+}
+header h1 img{
+	position: relative;
+	top: 14px;
+}
+header h1 span{
+	padding-left: 10px;
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+}
+header nav{
+	float: right;
+}
+header nav li{
+	float: left;
+	font-size: 16px;
+	color: rgb(142,175,188);
+	line-height: 60px;
+	position: relative;
+}
+header nav li>span,header nav li>img{
+	cursor: pointer;
+}
+header nav li>span:hover{
+	color: #fff;
+}
+header nav li img{
+	position: relative;
+	top: 5px;
+}
+header nav li .nav-title{
+	padding-left: 12px;
+	padding-right: 30px;
+}
+li.visited{
+	color: #fff;
+}
+@media screen and (max-width: 1150px){
+	header h1 span{
+		display: none;
+	}
+}
+@media screen and (max-width: 800px){
+	.nav-title{
+		display: none;
+	}
+	header nav li>img{
+		margin-right: 20px;
+	}
+}
+/*头部样式结束*/
+
+/*未阅消息列表样式开始*/
+.info-num{
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: rgb(0, 56, 139);
+    font-size: 12px;
+    left: 87px;
+    top: 9px;
+}
+.info-num-more{
+	width: 30px;
+}
+.info-wrapper{
+	position: fixed;
+	width: 0px;
+	height: 100%;
+	background: #fff;
+	z-index: 999;
+	box-shadow: -6px 1px 29px rgba(119, 119, 119, 0.2);
+	right: 0;
+	color: #818181;
+}
+.info-wrapper:before,.welcome-wrapper:before{
+    content: '';
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -10px;
+    left: 50px;
+}
+.info-items{
+	padding: 15px;
+	padding-top: 5px;
+}
+.info-item{
+	width: 238px;
+	border-bottom: 1px dashed #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+.info-item p,.info-detail p{
+	width: 100%;
+	font-size: 14px;
+	line-height: 25px;
+}
+.info-name{
+	float: left;
+	color: #3263b1;
+}
+.info-time{
+	float: right;
+}
+.info-item .info-des{
+	width: 238px;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	/*padding-bottom: 10px;*/
+}
+.info-des img{
+	margin-right: 5px;
+	position: relative;
+	top: 6px;
+}
+.info-item:hover{
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+.info-detail{
+	padding: 15px;
+	display: none;
+}
+.info-detail-content{
+	margin-top: 10px;
+}
+.info-detail-content img{
+	float: left;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px rgb(181, 181, 181);
+}
+.info-detail-content-text{
+	width: 173px;
+    float: left;
+    line-height: 25px;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background: #f6f6f6;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 15px;
+}
+.info-detail-content-text:before{
+	position: absolute;
+	content: '';
+	border-right: 8px solid #f6f6f6;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	top: 20px;
+	left: -8px;
+}
+.back-info{
+	line-height: 30px;
+}
+.back-info img{
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.info-more{
+	cursor: pointer;
+	text-align: center;
+	font-size: 14px;
+}
+.info-more>img{
+	position: relative;
+	top: 1px;
+	margin-left: 3px;
+}
+.info-more:hover{
+	position: relative;
+	top: 1px;
+	left: 1px;
+	color: #3263b1;
+}
+/*当图标文字隐藏不见时，向上尖角的位置*/
+@media screen and (max-width: 800px){
+	.info-wrapper:before{
+	    left: 190px;
+	    border-width: 7px;
+		top: -7px;
+	}
+	.info-num{
+		left: 12px;
+	}
+}
+/*未阅消息列表样式结束*/
+
+/*欢迎面板样式开始*/
+.welcome-wrapper{
+	display: none;
+	position: fixed;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    border: 1px solid #d2d2d2;
+	width:122px;
+	color: #818181;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 14px;
+	cursor: pointer;
+	z-index: 999;
+}
+.welcome-wrapper p:hover{
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+@media screen and (max-width: 800px){
+	.welcome-wrapper{
+		right: 18px;
+	}
+	.welcome-wrapper:before{
+		left: 105px;
+		border-width: 7px;
+		top: -7px;
+	}
+}
+/*欢迎面板样式结束*/

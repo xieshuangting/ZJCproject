@@ -1,0 +1,281 @@
+html{
+	height: 98%;
+	width: 100%;
+	color: rgb(0,20,51);
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+.clearfix{
+	clear: both;
+	display: table;
+}
+p,ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+
+/*企业信息样式开始*/
+.mar-20{
+	margin-left: 20px;
+}
+.com-info-wrapper,.com-history-wrapper{
+	padding-left:10px;
+	padding-right:15px;
+	box-sizing: border-box;
+	width: 100%;
+}
+.com-info,.com-history{
+	background: #fff;
+	border-radius: 8px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.com-title{
+	padding: 15px;
+	padding-left: 30px;
+	font-size: 16px;
+}
+.com-title img{
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.com-content{
+	padding:0 30px 15px;
+	box-sizing: border-box;
+	width: 100%;
+}
+.com-top{
+	width: 100%;
+	height: 65px;
+	border-bottom: 2px solid rgba(46,99,177,0.5);
+}
+.com-top>div{
+	height: 50px;
+}
+.com-top img{
+	float: left;
+	margin-right: 10px;
+}
+.com-top-title{
+	float: left;
+}
+.com-top-title p:first-child{
+	font-size: 16px;
+}
+.com-top-title p:last-child{
+	font-size: 24px;
+}
+.row:not(.com-top)>div:before{
+	content: '';
+	height: 100%;
+	position: absolute;
+	border-left:4px solid #2e63b1;
+	left: 0;
+}
+.row:not(.com-top):nth-child(odd){
+	background: #f2f2f2;
+}
+.radius:nth-child(2){
+	margin-left: 20px;
+}
+.radius img{
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+	width: 15px;
+	height: 15px;
+}
+.year-info{
+	float: left;
+	width: 20%;
+}
+.year-table{
+	float: left;
+	width: 80%;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.year-info img{
+	position: relative;
+	top: 4px;
+}
+.year{
+	font-size: 26px;
+}
+.year-table li{
+	width: 33.3%;
+	float: left;
+	position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.year-table li:after,.list li:after,.list2 li:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-right: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+	left: 0;
+}
+.year-table li:nth-child(3n+3):after{
+	content: '';
+	border-right: none;
+}
+.year-table li:nth-last-child(1):after,.year-table li:nth-last-child(2):after,.year-table li:nth-last-child(3):after{
+	content: '';
+	border-bottom: none;
+}
+.year-table li span:first-child{
+	width: 140px;
+	display: inline-block;
+	text-align: right;
+}
+.num{
+	font-weight: bold;
+}
+.col-title{
+	float: left;
+	width: 120px;
+	background: #f2f2f2;
+	height: 100px;
+	margin-left: -10px;
+	padding-left: 10px;
+	line-height: 100px;
+}
+.list,.list2{
+	float: left;
+	width: calc(100% - 120px);
+	height: 100px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+.list li{
+	float: left;
+	position: relative;
+    box-sizing: border-box;
+}
+.list li:nth-child(2n+1){
+	text-align: right;
+	width: 63%;
+}
+.list li:nth-child(2n){
+	width: 37%;
+	text-align: center;
+}
+
+.col-3.list2-wrapper{
+	width: 43%;
+	float: right;
+}
+.list2 li{
+	float: left;
+	height: 25px;
+	width: 63%;
+	text-align: center;
+	position: relative;
+}
+.list2 li:nth-child(2){
+	float: right;
+	height: 100px;
+	width: 37%;
+	line-height: 100px;
+	text-align: center;
+}
+
+.list li:nth-child(2n+2):after,.list2 li:nth-child(2):after{
+	content: '';
+	border-right: none;
+}
+.list li:nth-last-child(1):after,.list li:nth-last-child(2):after,.list2 li:nth-last-child(1):after,.list2 li:nth-child(2):after{
+	content: '';
+	border-bottom: none;
+}
+
+/*自定义栅栏布局样式开始*/
+.row{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	min-height: 25px;
+	line-height: 25px;
+}
+.col-2,.col-3,.col-4,.col-6{
+	padding-left: 10px;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+}
+.col-2{
+	width: 33.3%;
+}
+.col-3{
+	width: 50%;
+}
+.col-4{
+	width: 66.6%
+}
+.col-6{
+	width: 100%;
+}
+/*自定义栅栏布局样式介绍*/
+/*企业信息样式介绍*/
+
+/*历次业务发生情况样式开始*/
+.com-history-content-wrapper{
+	height: 100px;
+	width: 100%;
+	padding: 35px 30px 0;
+	box-sizing: border-box;
+}
+.com-history-content{
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+.com-history-content:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-bottom:#d06562 3px solid;
+	top: 31px;
+	left: 0;
+	padding-left:30px;
+	padding-right:30px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.com-history-content>div{
+	width: 100px;
+	text-align: center;
+	padding-top: 10px;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	z-index: 100;
+}
+.text-top,.text-bottom{
+	position: absolute; 
+	left: 0;
+}
+.text-top{
+	top: -20px;
+}
+.text-bottom{
+	top: 50px;
+}
+.com-history-content span:not(.text){
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 2px solid #666;
+	border-radius:50%;
+}
+/*历次业务发生情况样式结束*/

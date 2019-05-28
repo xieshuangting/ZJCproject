@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>深圳市中小微企业银行贷款风险补偿资金池管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/comdetails.css">
+</head>
+<body>
+	<div class="com-info-wrapper">
+		<div class="com-info">
+			<div class="com-title">
+				<img src="./img/详情页/title1.png"><span>企业信息</span>
+			</div>
+			<div class="com-content">
+				<div class="com-top row clearfix">
+					<div class="col-4">
+						<img src="./img/详情页/title2.png">
+						<div class="com-top-title">
+							<p>企业名称</p>
+							<p id="comName"></p>
+						</div>
+					</div>
+					<div class="col-2">
+						<img src="./img/详情页/title3.png">
+						<div class="com-top-title">
+							<p>统一社会信用代码:</p>
+							<p id="socialCode"></p>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-2">企业联系人：<span id="name"></span></div>
+					<div class="col-2">联系方式：<span id="phone"></span></div>
+					<div class="col-2">企业人数：<span id="comNum"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-2">注册日期：<span id="registerDate"></span></div>
+					<div class="col-2">中征码：<span id="invCode"></span></div>
+					<div class="col-2">经济分类：<span id="ecoType"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-4">企业地址：<span id="comAddress"></span></div>
+					<div class="col-2">是否有自营进出口经营权(未完成)<span class="mar-20"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">
+						<div class="year-info">
+							<img src="./img/详情页/title4.png">
+							<span class="year">2017</span>
+							<p>企业年报信息(万元)</p>
+						</div>
+						<ul class="year-table">
+							<li><span>企业营业收入/产值：</span><span class="num" id="income"></span></li>
+							<li><span>纳税合计：</span><span class="num" id="taxTotal"></span></li>
+							<li><span>总资产：</span><span class="num" id="totalAsset"></span></li>
+							<li><span>主营业务成本：</span><span class="num" id="mainCost"></span></li>
+							<li><span>流动负债：</span><span class="num" id="curLiabilities"></span></li>
+							<li><span>净资产：</span><span class="num" id="netAsset"></span></li>
+							<li><span>净利润：</span><span class="num" id="netProfit"></span></li>
+							<li><span>应收账款：</span><span class="num" id="receivables"></span></li>
+							<li><span>存货：</span><span class="num" id="inventories"></span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">当前在国内各银行业金融机构本外币贷款总额(万元):<span class="num" id="totalOut"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">所属行业：<span id="belongIndustry"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-3">
+						<p class="col-title">本企业属于</p>
+						<ul class="list">
+							<li>国家战略新兴产业：</li>
+							<li id="couNew">XXXX</li>
+							<li>深圳市战略新兴产业：</li>
+							<li id="szNew">XXXX</li>
+							<li>市发改委战略性新兴产业信用贷款项目：</li>
+							<li id="isLoad"></li>
+							<li>市科创委银政企合作项目：</li>
+							<li id="isSKCW"></li>
+						</ul>
+					</div>
+					<div class="col-3 list2-wrapper">
+						<p class="col-title">本企业是否属于</p>
+						<ul class="list2">
+							<li>"限制"与"禁止"类产业范畴</li>
+							<li id="isBelong"></li>
+							<li>金融、类金融行业</li>
+							<li>房地产行业</li>
+							<li>有不良征信记录</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="com-history-wrapper" id="comHistoryWrapper">
+		<div class="com-history">
+			<div class="com-title">
+				<img src="./img/详情页/title5.png"><span>历次业务发生情况</span>
+			</div>
+			<div class="com-history-content-wrapper">
+				<div class="com-history-content clearfix" id="historyList"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/comdetails.js"></script>
+</body>
+</html>

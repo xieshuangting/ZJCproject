@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>深圳市中小微企业银行贷款风险补偿资金池管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/prodetails.css">
+</head>
+<body>
+	<div class="com-info-wrapper">
+		<div class="com-info">
+			<div class="com-title">
+				<img src="./img/详情页/title1.png"><span>企业信息</span>
+			</div>
+			<div class="com-content">
+				<div class="com-top row clearfix">
+					<div class="col-4">
+						<img src="./img/详情页/title2.png">
+						<div class="com-top-title">
+							<p>企业名称</p>
+							<p id="comName"></p>
+						</div>
+					</div>
+					<div class="col-2">
+						<img src="./img/详情页/title3.png">
+						<div class="com-top-title">
+							<p>统一社会信用代码:</p>
+							<p id="socialCode"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="com-info-wrapper">
+		<div class="com-info">
+			<div class="com-title">
+				<img src="./img/详情页/title6.png"><span>授信信息</span>
+			</div>
+			<div class="com-content">
+				<div class="row clearfix">
+					<div class="col-2">贷款/授信方式：<span id="creditWay"></span></div>
+					<div class="col-2">贷款/授信合同编号：<span id="creditNo"></span></div>
+					<div class="col-2">贷款本金：<span id="creditMoney"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-2">贷款起始日期：<span id="loadBegin"></span></div>
+					<div class="col-2">贷款结束日期：<span id="loadEnd"></span></div>
+					<div class="col-2">贷款期限(月)：<span id="loadYears"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-2">年利率(%)：<span id="annuaRate"></span></div>
+					<div class="col-2">较国际同期基准利率上浮比例(%)：<span id="annuaRate2"></span></div>
+					<div class="col-2">贷款/授信用途<span id="loadUse" class="margin-20"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-2">经办支行：<span id="handleBank"></span></div>
+					<div class="col-2">经办支行联系人：<span id="handlePeople"></span></div>
+					<div class="col-2">还款方式<span id="reimbursement" class="margin-20"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">当前在国内各银行业金融机构本外币贷款总额(万元):<span class="num" id="totalOut"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">本次是否为银行业金融机构的首笔还款<span id="firstLoad" class="margin-20"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">贷款是否用于转贷、委托贷款、并购贷款以及参与民间借贷和投资资本市场<span id="isLoadUse" class="margin-20"></span></div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-6">贷款是否已获得融资担保公司担保/纳入财政再担保、以及享受其他同类风险补偿政策<span id="acquired" class="margin-20"></span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="com-info-wrapper">
+		<div class="com-info">
+			<div class="com-title">
+				<img src="./img/详情页/title7.png"><span>保证措施</span>
+			</div>
+			<div class="com-content">
+				<div class="show-button">
+					<span><img src="./img/详情页/checkbox1.png">信用</span>
+					<span><img src="./img/详情页/checkbox2.png">抵押</span>
+					<span><img src="./img/详情页/checkbox1.png">质押</span>
+					<span><img src="./img/详情页/checkbox1.png">保证</span>
+					<span><img src="./img/详情页/checkbox1.png">其他</span>
+					<span class="input-button">123421</span>
+				</div>
+				<div class="table-list">
+					<div class="table-list-title">
+						<span>抵押物</span><img src="./img/详情页/down.png" class="down">
+					</div>
+					<div class="tableList">
+						<ul class="table-list-content clearfix" id="tableList1">
+							<!-- 插入内容 -->
+						</ul>
+						<div class="news-change" id="newsChange1">
+							<!-- 插入页码 -->
+						</div>
+						<span class="hidden" id="hiddenIndexCur">1</span>
+						<span class="hidden" id="hiddenPageCount"></span>
+					</div>
+				</div>
+				<div class="table-list">
+					<div class="table-list-title">
+						<span>质押物</span><img src="./img/详情页/down.png" class="down">
+					</div>
+					<div class="tableList">
+						<ul class="table-list-content clearfix" id="tableList2">
+							<!-- 插入内容 -->
+						</ul>
+						<div class="news-change" id="newsChange2">
+							<!-- 插入页码 -->
+						</div>
+						<span class="hidden" id="hiddenIndexCur2">1</span>
+						<span class="hidden" id="hiddenPageCount2"></span>
+					</div>
+				</div>
+				<div class="table-list">
+					<div class="table-list-title">
+						<span>保证人</span><img src="./img/详情页/down.png" class="down">
+					</div>
+					<div class="tableList">
+						<ul class="table-list-content2 clearfix" id="tableList3">
+							<!-- 插入内容 -->
+						</ul>
+						<div class="news-change"  id="newsChange3">
+							<!-- 插入页码 -->
+						</div>
+						<span class="hidden" id="hiddenIndexCur3">1</span>
+						<span class="hidden" id="hiddenPageCount3"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="com-history-wrapper" id="proHistoryWrapper">
+		<div class="com-history">
+			<div class="com-title">
+				<img src="./img/详情页/title8.png"><span>项目生命周期</span>
+			</div>
+			<div class="com-history-content-wrapper">
+				<div class="com-history-content clearfix" id="historyList"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/prodetails.js"></script>
+</body>
+</html>

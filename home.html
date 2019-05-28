@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>深圳市中小微企业银行贷款风险补偿资金池管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+	<section class="status-wrapper clearfix">
+		<div class="status-items status-items-one">
+			<h2><img src="./img/全局视图/title1.png" width="20" height="20">资金状态分布(万元)</h2>
+			<ul class="clearfix capital" id="capital">
+				<li>
+					<img src="./img/全局视图/资金总款.png" width="24" height="24">
+					<span class="status-title">贷款项目总额</span>
+					<span class="status-num color-green"><div class="status-num-content" id="proj_amount_total"></div></span>
+				</li>
+				<li>
+					<img src="./img/全局视图/资金不良.png" width="24" height="24">
+					<span class="status-title">不良贷款总额</span>
+					<span class="status-num color-red"><div class="status-num-content" id="bad_amount_total"></div></span>
+				</li>
+				<li>
+					<img src="./img/全局视图/资金风险.png" width="24" height="24">
+					<span class="status-title">风险补偿总额</span>
+					<span class="status-num color-yellow"><div class="status-num-content" id="appropriation_amount_total"></div></span>
+				</li>
+				<li>
+					<img src="./img/全局视图/资金返还.png" width="24" height="24">
+					<span class="status-title">资金返还总额</span>
+					<span class="status-num color-orange"><div class="status-num-content" id="returned_amount_total"></div></span>
+				</li>
+				<li>
+					<img src="./img/全局视图/资金待返还.png" width="24" height="24">
+					<span class="status-title">待返还总额</span>
+					<span class="status-num color-blue"><div class="status-num-content" id="returned_amount"></div></span>
+				</li>
+				<li>
+					<img src="./img/全局视图/资金核销.png" width="24" height="24">
+					<span class="status-title">核销总额</span>
+					<span class="status-num color-blue"><div class="status-num-content" id="cancle_amount_total"></div></span>
+				</li>
+				<li>
+					<img src="./img/全局视图/资金余额.png" width="24" height="24">
+					<span class="status-title">资金池资金余额</span>
+					<span class="status-num color-blue2"><div class="status-num-content" id="fund_pool_remaining"></div></span>
+				</li>
+				<li class="com-count">
+					<img src="./img/全局视图/资金企业数.png" width="24" height="24">
+					<span class="status-title">项目企业数(家)</span>
+					<span class="status-num color-green"><div class="status-num-content" id="CompanyCount2"></div></span>
+				</li>
+			</ul>
+		</div>	
+		<div class="status-items status-items-two">
+			<ul class="capital">
+				<li>
+					<img src="./img/全局视图/资金企业数.png" width="24" height="24">
+					<span class="status-title">项目企业数(家)</span>
+					<span class="status-num color-green"><div class="status-num-content" id="CompanyCount"></div></span>
+				</li>
+			</ul>
+		</div>	
+	</section>
+	<section class="content-wrapper">
+		<section class="map-wrapper">
+			<h2><img src="./img/全局视图/title2.png" width="20" height="20">风险补偿区域分布</h2>
+			<div class="class-labels" id="classLabelsArea1">
+				<!-- <span><img src="./img/全局视图/title3.png" width="20" height="22">招商银行<img src="./img/全局视图/关闭.png" width="13" height="13"></span> -->
+			</div>
+			<div class="class-labels" id="classLabelsArea2"></div>
+			<div class="class-labels" id="classLabelsBank"></div>
+			<div class="class-labels" id="classLabelsIndustry"></div>
+			<div style="clear: both;"></div>
+			<div class="map-item">
+				<div class="map-total-money" id="mapTotalMoney">
+					<p>全市核销总额(万元)</p>
+					<div>
+						<span>0</span>
+						<span>0</span>
+						<span>0</span>
+						<span>0</span>
+						<span>6</span>
+						<span>7</span>
+						<span>8</span>
+						<span>9</span>
+					</div>
+				</div>
+				<div class="map-list">
+					<ul id="mapList" style="width: 240px;">
+						<!-- 用echarts渲染地区排名 -->
+					</ul>
+				</div>
+				<div class="map-chart" id="map_chart"></div>
+			</div>
+			<div class="pie-list clearfix">
+				<div class="pie-item">
+					<div class="pie-chart" id="pro_chart1"></div>
+					<div class="pie-des" id="compareText1">
+						<!-- <p><span>圆圈</span>贷款余额：￥2,543</p>
+						<p><span>圆圈</span>同比新增：￥2,543</p>
+						<p><span>圆圈</span>项目数量：￥2,543</p> -->
+					</div>
+				</div>
+				<div class="pie-item">
+					<div class="pie-chart" id="pro_chart2"></div>
+					<div class="pie-des" id="compareText2">
+						<!-- <p><span>圆圈</span>不良余额：￥2,543</p>
+						<p><span>圆圈</span>同比新增：￥2,543</p>
+						<p><span>圆圈</span>项目数量：￥2,543</p> -->
+					</div>
+				</div>
+				<div class="pie-item">
+					<div class="pie-chart" id="pro_chart3"></div>
+					<div class="pie-des" id="compareText3">
+						<!-- <p><span>圆圈</span>补偿余额：￥2,543</p>
+						<p><span>圆圈</span>同比新增：￥2,543</p>
+						<p><span>圆圈</span>项目数量：￥2,543</p> -->
+					</div>
+				</div>
+				<div class="pie-item">
+					<div class="pie-chart" id="pro_chart4"></div>
+					<div class="pie-des" id="compareText4">
+						<!-- <p><span>圆圈</span>清偿余额：￥2,543</p>
+						<p><span>圆圈</span>同比新增：￥2,543</p>
+						<p><span>圆圈</span>项目数量：￥2,543</p> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="right-wrapper">
+			<section class="in-storage in-storage-one">
+				<h2><img src="./img/全局视图/title4.png">入库总额排名(万元)</h2>
+				<p class="more">更多<img src="./img/全局视图/more.png"></p>
+				<p class="closemore">关闭更多<img src="./img/全局视图/close.png"></p>
+				<div id="bank_items">
+					<div class="bank-item">
+						<img src="./img/全局视图/排名1.png" class="bank-item-img" width="41" height="41">
+						<div class="bank-item-div">
+							<p class="bank-item-name">浦发银行</p>
+							<p class="bank-item-num">100,100</p>
+						</div>
+					</div>
+					<div class="bank-item">
+						<img src="./img/全局视图/排名2.png" class="bank-item-img" width="41" height="41">
+						<p class="bank-item-name">浦发银行</p>
+						<p class="bank-item-num">100,100</p>
+					</div>
+					<div class="bank-item">
+						<img src="./img/全局视图/排名3.png" class="bank-item-img" width="41" height="41">
+						<p class="bank-item-name">浦发银行</p>
+						<p class="bank-item-num">100,100</p>
+					</div>
+				</div>
+				<div class="more-wrapper">
+					<!-- 插入更多列表 -->
+				</div>
+			</section>
+			<section class="in-storage in-storage-two">
+				<h2><img src="./img/全局视图/title5.png">项目企业数排名(家数)</h2>
+				<p class="more">更多<img src="./img/全局视图/more.png"></p>
+				<p class="closemore">关闭更多<img src="./img/全局视图/close.png"></p>
+				<div id="bank_items2">
+					<div class="bank-item">
+						<img src="./img/全局视图/排名1.png" class="bank-item-img" width="41" height="41">
+						<p class="bank-item-name">浦发银行</p>
+						<p class="bank-item-num">100,100</p>
+					</div>
+					<div class="bank-item">
+						<img src="./img/全局视图/排名2.png" class="bank-item-img" width="41" height="41">
+						<p class="bank-item-name">浦发银行</p>
+						<p class="bank-item-num">100,100</p>
+					</div>
+					<div class="bank-item">
+						<img src="./img/全局视图/排名3.png" class="bank-item-img" width="41" height="41">
+						<p class="bank-item-name">浦发银行</p>
+						<p class="bank-item-num">100,100</p>
+					</div>
+				</div>
+				<div class="more-wrapper">
+					<!-- 插入更多列表 -->
+				</div>
+			</section>
+			<section class="in-storage clearfix industry">
+				<h2><img src="./img/全局视图/title6.png">深圳市战略新兴产业</h2>
+				<p class="industry-total">总和:<span id="industryTotal">678689</span></p>
+				<div id="industry_items">
+					<div class="industry-item bg-blue" id="xinXi">
+						<div class="industry-item-img">
+							<img src="./img/全局视图/产业信息技术.png" width="50" height="51">
+							<p>24241<img src="./img/全局视图/产业上升.png"></p>
+						</div>
+						<p class="industry-item-title">新一代信息技术</p>
+					</div>
+					<div class="industry-item bg-blue2" id="zhuangBei">
+						<div class="industry-item-img">
+							<img src="./img/全局视图/产业高端装备.png" width="50" height="51">
+							<p>24241<img src="./img/全局视图/产业下降.png"></p>
+						</div>
+						<p class="industry-item-title">高端装备制造</p>
+					</div>
+					<div class="industry-item bg-red" id="xinCaiLiao">
+						<div class="industry-item-img">
+							<img src="./img/全局视图/产业新材料.png" width="50" height="51">
+							<p>24241<img src="./img/全局视图/产业上升.png"></p>
+						</div>
+						<p class="industry-item-title">新材料</p>
+					</div>
+					<div class="industry-item bg-green" id="diTan">
+						<div class="industry-item-img">
+							<img src="./img/全局视图/产业低碳.png" width="50" height="51">
+							<p>24241<img src="./img/全局视图/产业上升.png"></p>
+						</div>
+						<p class="industry-item-title">绿色低碳</p>
+					</div>
+					<div class="industry-item bg-blue" id="yiYao">
+						<div class="industry-item-img">
+							<img src="./img/全局视图/产业医药.png" width="50" height="51">
+							<p>24241<img src="./img/全局视图/产业上升.png"></p>
+						</div>
+						<p class="industry-item-title">生物医药</p>
+					</div>
+					<div class="industry-item bg-blue2" id="haiYang">
+						<div class="industry-item-img">
+							<img src="./img/全局视图/产业海洋.png" width="50" height="51">
+							<p>24241<img src="./img/全局视图/产业上升.png"></p>
+						</div>
+						<p class="industry-item-title">海洋经济</p>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/echarts.min.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

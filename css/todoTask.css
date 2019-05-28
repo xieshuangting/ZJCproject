@@ -1,0 +1,243 @@
+html{
+	height: 98%;
+	width: 100%;
+	color: rgb(0,20,51);
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+.clearfix{
+	clear: both;
+	display: table;
+}
+p,ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+/*主体内容样式开始*/
+.container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.content-wrapper{
+	box-sizing: border-box;
+	padding:0 10px 0;
+	padding-right: 500px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+/*主体内容样式结束*/
+
+/*项目操作样式开始*/
+.right-wrapper{
+	width: 500px;
+	/*height: 100%;*/
+	position: absolute;
+	right: 0;
+	top: 0;
+	box-sizing: border-box;
+	padding:0 15px;
+}
+.pro-todo{
+	border-radius: 8px;
+	background:#fff;
+	width: 100%;
+	height: 100%;
+    padding-bottom: 20px;
+}
+.pro-todo-title{
+	padding-left: 40px;
+	padding-top: 10px;
+	font-size: 16px;
+}
+.pro-todo-title-img{
+	margin-right: 10px;
+    position: relative;
+    top: 6px;
+}
+.pro-todo-list{
+	padding: 20px 35px 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+.pro-todo-list-title{
+	padding-bottom: 10px;
+}
+.pro-todo-list-title-img{
+	width: 52px;
+	height: 52px;
+	margin-right: 15px;
+	float: left;
+}
+.pro-todo-list-title>p{
+	float: left;
+}
+.pro-todo-list-title-name{
+	display: block;
+	font-size: 18px;
+	padding-bottom: 4px;
+}
+.pro-todo-list-title-des{
+	display: block;
+	font-size: 14px;
+}
+.pro-todo-list-content{
+	position: relative;
+}
+.pro-todo-list-content:before{
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	border-left:1px solid rgba(46,99,177,.5);
+	left: 21px;
+	top: -3px;
+}
+.pro-todo-list-content p{
+	line-height: 30px;
+	padding-left: 70px;
+	position: relative;
+	font-size: 14px;
+	cursor: pointer;
+}
+.pro-todo-list-content p:before{
+	content: '';
+	position: absolute;
+	left: 11px;
+	top: 5px;
+	width: 21px;
+	height: 21px;
+	background-image: url(../img/待办任务/项目操作6-8.png);
+}
+.pro-todo-list-content p:hover{
+	background:rgba(46,99,177,.5);
+	color: #fff;
+}
+.pro-todo-list-content p:hover:before{
+	background-image: url(../img/待办任务/项目操作5-8.png);
+}
+/*项目操作样式结束*/
+
+/*待办事项样式开始*/
+.task-wrapper{
+	margin-bottom: 15px;
+}
+.task-wrapper,.info-wrapper{
+	background:#fff;
+	width: 100%;
+	height: 363px;
+	border-radius: 8px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.task-btn{
+	width:100%;
+	position: relative;
+}
+.more-btn{
+	position: absolute;
+	right: 23px;
+	top: 0;
+	font-size: 12px;
+	cursor: pointer;
+}
+.more-btn:after{
+	content: '';
+	position: absolute;
+	right: -23px;
+	top: 0;
+	width: 19px;
+	height: 13px;
+	background: url(../img/全局视图/more.png);
+}
+.task-btn-item{
+	height: 30px;
+	width: 160px;
+	text-align: center;
+	float: left;
+	border-radius: 4px;
+	border: 1px solid #6baadb;
+	font-size: 16px;
+	line-height: 30px;
+	background: #fff;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.task-btn-item.visited{
+	background: #2e63b1;
+	color: #fff;
+}
+.task-btn-item img{
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+.task-content{
+	padding-top: 15px;
+	width: 100%;
+}
+.task-content li:nth-child(2n+1){
+	background: #f2f2f2;
+}
+.task-content ul li.task-list-top{
+	background: #6ba3db;
+	color: #fff;
+	font-size: 16px;
+}
+.task-content li{
+	height: 40px;
+	display: flex;
+	line-height: 40px;
+	font-size: 14px;
+}
+.task-content li:not(.task-list-top){
+	cursor: pointer;
+}
+.task-content li p{
+	text-align: center;
+}
+
+.task-list-item-first span{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../img/待办任务/列表图标.png);
+	margin-right: 4px;
+	position: relative;
+	top: 4px;
+}
+.task-content li p:first-child{
+	flex: 1 1 auto;
+	min-width: 268px;
+	text-align: left;
+    padding-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.task-content li p:nth-child(2){
+	width: 50px;
+	flex: 1 1 50px;
+}
+.task-content li p:last-child{
+	width: 160px;
+	flex: 1 1 160px;
+}
+/*待办事项样式结束*/
+
+/*消息样式开始*/
+.task-title{
+	font-size: 16px;
+}
+.task-title img{
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+/*消息样式结束*/

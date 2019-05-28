@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>待办任务</title>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/todoTask.css">
+</head>
+<body>
+	<div class="container">
+		<div class="content-wrapper">
+			<div class="task-wrapper">
+				<div class="task-btn clearfix">
+					<p class="task-btn-item visited"><img src="./img/待办任务/任务图标1.png">待办事项</p>
+					<p class="task-btn-item"><img src="./img/待办任务/任务图标2.png">已办事项</p>
+					<p class="more-btn" id="moreTask">更多</p>
+				</div>
+				<div class="task-content">
+					<ul id="taskLists">
+						<!-- 插入待办已办列表 -->
+						<!-- <li class="task-list-top">
+							<p>事项名称</p>
+							<p>上一步处理人</p>
+							<p>时间</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="info-wrapper">
+				<div class="task-btn clearfix">
+					<p class="task-title"><img src="./img/待办任务/title2.png">未阅消息</p>
+					<p class="more-btn" id="moreInfo">更多</p>
+				</div>
+				<div class="task-content">
+					<ul id="infoList">
+						<!-- 未阅插入消息列表 -->
+						<!-- <li class="task-list-top">
+							<p>消息内容</p>
+							<p>发布人</p>
+							<p>时间</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li>
+						<li>
+							<p class="task-list-item-first"><span></span>(贷款项目录入)贷款项目录入-XX集团</p>
+							<p>管理员</p>
+							<p>2018-11-12 17:44:32</p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="right-wrapper">
+			<div class="pro-todo">
+				<div class="pro-todo-title">
+					<img src="./img/待办任务/title1.png" class="pro-todo-title-img">
+					<span>项目操作</span>
+				</div>
+				<div class="pro-todo-lists">
+					<div class="pro-todo-list">
+						<div class="pro-todo-list-title clearfix">
+							<img src="./img/待办任务/项目操作1-8.png" class="pro-todo-list-title-img">
+							<p>
+								<span class="pro-todo-list-title-name">贷款项目可发起操作</span>
+								<span class="pro-todo-list-title-des">项目状态为正常时，允许发起的操作</span>
+							</p>
+						</div>
+						<div class="pro-todo-list-content">
+							<p data-urlname='enterpriseInfoInput'>企业信息录入</p>
+							<p data-urlname='singleProjectInfoInput'>项目信息单个录入</p>
+							<p data-urlname='batchProjectInfoInput'>项目信息批量录入</p>
+							<p data-urlname='enterpriseInfoChange'>企业信息变更</p>
+							<p data-urlname='projectInfoChange'>项目信息变更</p>
+							<p data-urlname='nonPerformingStatusApply'>不良贷款入库申请</p>
+						</div>
+					</div>
+					<div class="pro-todo-list">
+						<div class="pro-todo-list-title clearfix">
+							<img src="./img/待办任务/项目操作2-8.png" class="pro-todo-list-title-img">
+							<p>
+								<span class="pro-todo-list-title-name">不良贷款项目可发起操作</span>
+								<span class="pro-todo-list-title-des">项目状态为不良后，允许发起的操作</span>
+							</p>
+						</div>
+						<div class="pro-todo-list-content">
+							<p data-urlname="riskCompensationApply">不良贷款风险补偿申请</p>
+							<p data-urlname="nonPerformingStatusRevoke">不良贷款撤销申请</p>
+						</div>
+					</div>
+					<div class="pro-todo-list">
+						<div class="pro-todo-list-title clearfix">
+							<img src="./img/待办任务/项目操作3-8.png" class="pro-todo-list-title-img">
+							<p>
+								<span class="pro-todo-list-title-name">风险补偿项目可发起操作</span>
+								<span class="pro-todo-list-title-des">项目已享受风险补偿后，允许发起的操作</span>
+							</p>
+						</div>
+						<div class="pro-todo-list-content">
+							<p data-urlname="assetsLiquidateRecordCommit">不良贷款请收登记</p>
+							<p data-urlname="fundsReturnedRecordCommit">不良贷款请收资金返还登记</p>
+							<p data-urlname="assetsLiquidateFinishApply">不良贷款结束请收申请</p>
+						</div>
+					</div>
+					<div class="pro-todo-list">
+						<div class="pro-todo-list-title clearfix">
+							<img src="./img/待办任务/项目操作4-8.png" class="pro-todo-list-title-img">
+							<p>
+								<span class="pro-todo-list-title-name">项目已发起请收后，允许发起操作</span>
+								<span class="pro-todo-list-title-des">项目完成不良贷款结束请收动作后，允许发起的操作</span>
+							</p>
+						</div>
+						<div class="pro-todo-list-content">
+							<p data-urlname="assetsCancelVerificationApply">呆账贷款核销登记</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/todoTask.js"></script>
+</body>
+</html>

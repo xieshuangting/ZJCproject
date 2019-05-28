@@ -1,0 +1,284 @@
+html{
+	height: 98%;
+	width: 100%;
+	color: rgb(0,20,51);
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+.clearfix{
+	clear: both;
+	display: table;
+}
+p,ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.margin-20{
+	margin-left:20px;
+}
+
+/*企业信息样式开始*/
+.com-info-wrapper,.com-history-wrapper{
+	padding-left:10px;
+	padding-right:15px;
+	box-sizing: border-box;
+	width: 100%;
+}
+.com-info,.com-history{
+	background: #fff;
+	border-radius: 8px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.com-title{
+	padding: 15px;
+	padding-left: 30px;
+	font-size: 16px;
+}
+.com-title img{
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.com-content{
+	padding:0 30px 15px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+}
+.com-top>div{
+	height: 50px;
+}
+.com-top img{
+	float: left;
+	margin-right: 10px;
+}
+.com-top-title{
+	float: left;
+}
+.com-top-title p:first-child{
+	font-size: 16px;
+}
+.com-top-title p:last-child{
+	font-size: 24px;
+}
+.row:not(.com-top)>div:before{
+	content: '';
+	height: 100%;
+	position: absolute;
+	border-left:4px solid #2e63b1;
+	left: 0;
+}
+.row:not(.com-top):nth-child(even){
+	background: #f2f2f2;
+}
+.radius:nth-child(2){
+	margin-left: 20px;
+}
+.radius img{
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+	width: 15px;
+	height: 15px;
+}
+.num{
+	font-weight: bold;
+}
+
+/*自定义栅栏布局样式开始*/
+.row{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	min-height: 25px;
+	line-height: 25px;
+}
+.col-2,.col-3,.col-4,.col-6{
+	padding-left: 10px;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+}
+.col-2{
+	width: 33.3%;
+}
+.col-3{
+	width: 50%;
+}
+.col-4{
+	width: 66.6%
+}
+.col-6{
+	width: 100%;
+}
+/*自定义栅栏布局样式介绍*/
+/*企业信息样式介绍*/
+
+/*历次业务发生情况样式开始*/
+.com-history-content-wrapper{
+	height: 100px;
+	width: 100%;
+	padding: 15px 30px 0;
+	box-sizing: border-box;
+}
+.com-history-content{
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+.com-history-content:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-bottom:#d06562 3px solid;
+	top: 31px;
+	left: 0;
+	padding-left:30px;
+	padding-right:30px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.com-history-content>div{
+	width: 100px;
+	text-align: center;
+	padding-top: 10px;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	z-index: 100;
+}
+.text-top,.text-bottom{
+	position: absolute; 
+	left: 0;
+}
+.text-top{
+	top: -20px;
+}
+.text-bottom{
+	top: 50px;
+}
+.com-history-content span:not(.text){
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 2px solid #666;
+	border-radius:50%;
+}
+/*历次业务发生情况样式结束*/
+
+/*保证措施样式开始*/
+.show-button{
+	font-size: 14px;
+	position: absolute;
+	right: 100px;
+	top: -35px;
+}
+.show-button span{
+	margin-right: 30px;
+}
+.show-button img{
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+.input-button{
+	display: inline-block;
+	border-radius: 4px;
+	border: 1px solid #7b9fd6;
+	padding: 3px 8px;
+}
+.table-list{
+	margin-bottom: 20px;
+}
+.table-list-title{
+	position: relative;
+	padding-left: 40px;
+	background: #f2f2f2;
+	height: 40px;
+	line-height: 40px;
+}
+.table-list-title img{
+	position: absolute;
+	right: 20px;
+	top: 13px;
+	cursor: pointer;
+	display: inline-block;
+}
+.table-list-content,.table-list-content2{
+	width: 100%;
+}
+.table-list-content li,.table-list-content2 li{
+	width: 16.6%;
+	float: left;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+.table-list-content2 li:nth-child(2n+1){
+	width: 20%;
+}
+.table-list-content2 li:nth-child(2n){
+	width: 80%;
+}
+.table-list-content li:after,.table-list-content2 li:after{
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	border-bottom:1px solid #bcbcbc;
+	left: 0;
+}
+.table-list-content li:nth-child(6n+1),.table-list-content2 li{
+	padding-left: 40px;
+	box-sizing: border-box;
+	text-align: left;
+}
+/*翻页样式开始*/
+.news-change {
+  margin: 20px 0 0;
+  text-align: right;
+  font-size: 14px;
+  cursor: pointer;
+  height: 30px;
+}
+.news-change a {
+  padding: 2px 8px;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+  margin: 2px;
+  color: #a2a2a2;
+  text-decoration: none;
+}
+.news-change a:not(.now-page):hover {
+  border-color: #6b6b6b;
+  color: #6b6b6b;
+}
+.news-change .now-page{
+  color: #fff;
+  background-color: #001A3F;
+  border-color: #001A3F;
+  cursor: default;
+}
+.news-change .no-click{
+  cursor: default;
+}
+.news-change a.no-click:hover{
+  color: #a2a2a2;
+  background: #fff;
+  border-color: #ddd;
+}
+.hidden{
+	display: none;
+}
+/*翻页样式结束*/
+/*保证措施样式结束*/
